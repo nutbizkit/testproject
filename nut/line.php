@@ -5,6 +5,7 @@ $message = "Hey nut client is already finish the check-in please go to see the c
 function line_notify($Token, $message) {
 	
 	$lineapi = $Token;
+	
 	$mms =  trim($message);
 	$imgthumb = "http://www.sednasystem.com/img/Admin/sedna-logo-admin.png";
 	$imgfull = "http://www.sednasystem.com/dashboard/img/lycan-qnd-dashboard-logo3.png";
