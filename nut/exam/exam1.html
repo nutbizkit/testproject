@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Exam 1</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		Find and fix javascript error syntax to render the value and index in the object
+	</body>
+	<script>
+		var obj = {
+	    firstName: 'Sedna',
+	    lastName: 'Asia',
+	    age: 18,
+	    Color: 'blue'
+		};
+		
+		obj.each(function(index, value) {
+			$('body').html(
+				'<div style="width: 100%">' +
+					'<p>' + index + ': ' + value +
+				'</div>' +
+			);
+		});
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Exam 4</title>
+		<style>
+			#result {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+  <body>
+    <h1>Sedna product</h1>
+    Product_Id: <input type="text" value="" id="product_id">
+    Product: <input type="text" value="" id="product">
+    Description: <input type="text" value="" id="description">
+    Price: <input type="text" value="" id="price">
+    <button id="add">Add</button>
+    <table border="1" width="100%" id="result">
+    	<thead>
+	      <tr>
+	        <th>Id</th>
+	        <th>Product</th>
+	        <th>Description</th>
+	        <th>Price</th>
+	      </tr>
+      </thead>
+      <tbody id="body">
+	      <tr>
+	        <td>@row.Id</td>
+	        <td>@row.Name</td>
+	        <td>@row.Description</td>
+	        <td>@row.Price</td>
+	      </tr>
+	    </tbody>
+    </table>
+  </body>
+  <script>
+  	document.getElementById('add').addEventListener('click', function(event) {
+	  	var trnode = document.createElement('tr'),
+	  		inputArr = document.getElementsByTagName('input');
+	  		
+			inputArr = Array.prototype.slice.call(inputArr);
+			inputArr.forEach(function(element) {
+				var tdnode = document.createElement('td'),
+					textnode = document.createTextNode(element.value);
+				tdnode.appendChild(textnode);
+				trnode.appendChild(tdnode);
+			});
+			
+			document.getElementById("body").appendChild(trnode);
+  	});
+  </script>
+</html>

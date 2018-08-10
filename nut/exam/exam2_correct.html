@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Exam 2</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<style>
+			.panel, .container {
+				margin-top: 20px;
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center" id="header"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<button class="btn btn-primary" id="showResult"> Click here</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+			      <div class="panel-heading">Results</div>
+			      <div class="panel-body" id="result">No results</div>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		var app = {
+			methods: {
+				init: function() {
+					this.renderText();
+					this.bindButtonEvent();
+				}, //init
+				renderText: function() {
+					$('#header').html('Find and fix javascript error syntax to show the result when click on button below');
+				},
+				bindButtonEvent: function() {
+					$('#showResult').unbind().on('click', app.events.onClickShowResult);
+				}
+			}, //methods
+			events: {
+				onClickShowResult: function(event) {
+					var arr = ['Congrats', 'your code is working now!'];
+					$('#result').empty()
+					$.each(arr, function(i, v) {
+						$('#result').append(
+							'<div class="row">' +
+								'<div class="col-md-12">' + v + '</div>' +
+							'</div>'
+						);
+					});
+					
+					$('#result').addClass('bg-success');
+				}
+			}, //events
+		} //app
+		
+		$(document).ready(function() {
+			app.methods.init.call(app.methods);
+		});
+	</script>
+</html>

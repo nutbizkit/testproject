@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Exam 3</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<style>
+			.panel, .container {
+				margin-top: 20px;
+			}
+			.input-group {
+				padding: 5px;
+			}
+			em {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>1. Create javascript to take the value from input when the user type on input and click on button. (<em>*Display the value for each line in the result div</em>)</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="input-group">
+	          <span class="input-group-addon">Firstname</span>
+	          <input type="text" id="fname" name="Firstname" class="form-control">
+	        </div>
+					<div class="input-group">
+	          <span class="input-group-addon">Name</span>
+	          <input type="text" id="name" name="Name" class="form-control">
+	        </div>
+					<div class="input-group">
+	          <span class="input-group-addon">Address</span>
+	          <input type="text" id="address" name="Address" class="form-control">
+	        </div>
+				</div>
+				<div class="col-md-12">
+					<button class="btn btn-primary btn-block" id="submit"> Submit</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+			      <div class="panel-heading">Results</div>
+			      <div class="panel-body" id="result"></div>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
