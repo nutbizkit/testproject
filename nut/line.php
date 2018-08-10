@@ -3,6 +3,7 @@ $Token = "rOdBTNjED0VnfuT7Id97xpvOQrUinehoGT2iTN0dFDS";
 $message = "Hey nut client is already finish the check-in please go to see the client now!";
 
 function line_notify($Token, $message) {
+	
 	$lineapi = $Token;
 	$mms =  trim($message);
 	$imgthumb = "http://www.sednasystem.com/img/Admin/sedna-logo-admin.png";
