@@ -1,7 +1,7 @@
 <?php
 $Token = "rOdBTNjED0VnfuT7Id97xpvOQrUinehoGT2iTN0dFDS";
 $message = "Hey nut client is already finish the check-in please go to see the client now!";
-echo ('test NutBizkit Branch !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+echo ('What the fuck');
 function line_notify($Token, $message) {
 	
 	$lineapi = $Token;
